@@ -1,10 +1,17 @@
 package assignment1_filipemorais;
 
+import java.util.Scanner;
+
 public class removecharacterinstring {
 
 	public static void main(String[] args) {
-	    String s = "geeksforgeeks";
-	    removeChar(s, 'g');
+		Scanner scanner = new Scanner(System.in);
+		System.out.println("What is your word?");
+		String word = scanner.nextLine();
+		System.out.println("What is the character to be removed?");
+		String strToChar = scanner.next();
+		char charToRem = strToChar.charAt(0);
+	    removeChar(word, charToRem);
 	}
 	
 	static void removeChar(String s, char c)
